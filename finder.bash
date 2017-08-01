@@ -39,6 +39,11 @@ function pfs() {
 
 # open finder
 function fnd() {
-    open -a "Finder" "$argv"
+	if [ -z $argv ]; then
+	    open -a "Finder" "$argv"
+	else
+		open -a "Finder" $(pwd)
+	fi
 }
+
 
